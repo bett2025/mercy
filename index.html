@@ -153,19 +153,19 @@
 
 <!-- JavaScript -->
 <script>
-  document.getElementById("loginBtn").addEventListener("click", function() {
-    const pass = document.getElementById("password").value;
-    if (pass === "chepkoech") {
-      document.getElementById("loginPage").style.display = "none";
-      document.getElementById("mainContent").style.display = "block";
+  <script>
+  function checkLogin() {
+    const password = document.getElementById("password").value;
+    if (password === "chepkoech") {
+      document.getElementById("loginSection").style.display = "none";
+      document.getElementById("content").style.display = "block";
     } else {
-      document.getElementById("error").innerText = "<p id="error" class="text-danger mt-2 fw-bold">
-  ❌ Incorrect password! <br>
-  This page is private and only meant for <span class="highlight">Mercy Chepkoech Chirchir</span>.
-</p>
-";
+      document.getElementById("error").innerHTML = 
+        "❌ Incorrect password! <br> This page is private and only meant for <span class='highlight'>Mercy Chepkoech Chirchir</span>.";
     }
-  });
+  }
+</script>
+
 </script>
 
 </body>
