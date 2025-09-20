@@ -152,21 +152,29 @@
 </div>
 
 <!-- JavaScript -->
+  <!-- JavaScript -->
 <script>
-  <script>
   function checkLogin() {
     const password = document.getElementById("password").value;
     if (password === "chepkoech") {
-      document.getElementById("loginSection").style.display = "none";
-      document.getElementById("content").style.display = "block";
+      document.getElementById("loginPage").style.display = "none";
+      document.getElementById("mainContent").style.display = "block";
     } else {
       document.getElementById("error").innerHTML = 
         "❌ Incorrect password! <br> This page is private and only meant for <span class='highlight'>Mercy Chepkoech Chirchir</span>.";
     }
   }
+
+  // allow pressing Enter key to submit
+  document.getElementById("password").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      checkLogin();
+    }
+  });
+
+  document.getElementById("loginBtn").addEventListener("click", checkLogin);
 </script>
 
-</script>
 
 </body>
 </html>
